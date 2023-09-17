@@ -1,41 +1,41 @@
-a = [35, 12, -3, 76, 67, -34, 7, 2, 9]
-g = []
-print("Список содержит " + str(a))
+list = [35, 12, -3, 76, 67, -34, 7, 2, 9]
+reslist = []
+print("Список содержит " + str(list))
 # a.sort()
-b = 0
-c = 0
-d = 0
-e = 1
-for i in a:
+negative = 0
+pair = 0
+nonpair = 0
+multiplication = 1
+for i in list:
     if i < 0:
-        b += i
-        g.append(b)
-print("Створити список цілих, що містить лише негативні числа з першого списку; " + str(g))
-g.clear()
-for z in a:
+        negative += i
+        reslist.append(negative)
+print("Створити список цілих, що містить лише негативні числа з першого списку; " + str(reslist))
+reslist.clear()
+for z in list:
     if z % 2 == 0:
-        g.append(z)
-        c += z
-print("Створити список цілих, що містить лише парні числа з першого списку; " + str(g))
-g.clear()
-for y in a:
+        reslist.append(z)
+        pair += z
+print("Створити список цілих, що містить лише парні числа з першого списку; " + str(reslist))
+reslist.clear()
+for y in list:
     if y % 2 != 0:
-        d += y
-        g.append(y)
-print("Створити список цілих, що містить лише непарні числа з першого списку; " + str(g))
-g.clear()
-for x in a:
+        nonpair += y
+        reslist.append(y)
+print("Створити список цілих, що містить лише непарні числа з першого списку; " + str(reslist))
+reslist.clear()
+for x in list:
     if x % 3 == 0:
         if x > 0:
-            e *= x
+            multiplication *= x
 
-for u in a:
+for u in list:
     if u > 0:
-        g.append(u)
-        f = min(g) * max(g)
-print("Створити список цілих, що містить лише позитивні числа з першого списку." + str(g))
-print("Добуток елементів між мінімальним та максимальним елементом; " + str(f))
-print("Добуток елементів з кратними індексами 3; " + str(e))
-print("Суму парних чисел; " + str(d))
-print("Суму непарних чисел; " + str(c))
-print("Суму негативних чисел; " + str(b))
+        reslist.append(u)
+        minmax = min(reslist) * max(reslist)
+print("Створити список цілих, що містить лише позитивні числа з першого списку." + str(reslist))
+print("Добуток елементів між мінімальним та максимальним елементом; " + str(minmax))
+print("Добуток елементів з кратними індексами 3; " + str(multiplication))
+print("Суму парних чисел; " + str(nonpair))
+print("Суму непарних чисел; " + str(pair))
+print("Суму негативних чисел; " + str(negative))
